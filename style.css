@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Colors */
+:root {
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+    --black:hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    max-width: 37.5rem;
+    background: var(--white);
+    border-radius: 15px;
+}
+
+.card .product-photo {
+    border-radius: 15px 0 0 15px;
+    width: 50%;
+}
+
+.card .product-description {
+    width: 50%;
+    padding: 2rem;
+}
+
+.card .product-description h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.card .product-description h1 {
+    font-family: 'Fraunces', serif;
+    color: var(--black);
+    margin: 1.25rem 0;
+    line-height: 2rem;
+}
+
+.card .product-description p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45rem;
+    margin: 1.5rem 0;
+}
+
+.card .product-description .card-price {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.2rem;
+}
+
+.card .product-description .sale-price {
+    font-family: 'Fraunces', serif;
+    color: var(--green-500);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.card .product-description .original-price {
+    margin: 0.5rem 0;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.card .product-description button {
+    background: var(--green-500);
+    color: var(--white);
+    width: 100%;
+    height: 3rem;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    border-radius: 10px;
+    margin: 1.6rem 0 0 0;
+    font-stretch: expanded;
+    font-size: 0.8rem;
+}
+
+.card .product-description button:hover {
+    background: var(--green-700);
+}
+
+
+.product-photo-mobile {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .card {
+        flex-direction: column;
+        max-width: 21.5rem;
+    }
+
+    .card .product-photo {
+        display: none;
+    }
+
+    .card .product-photo-mobile {
+        width: 100%;
+        display: inline;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .card .product-description {
+        width: 100%;
+        padding: 1.6rem;
+    }
+
+    .card .product-description h1 {
+        margin: 0.75rem 0 0 0;
+    }
+
+    .card .product-description p {
+        margin-top: 1rem;
+    }
+
+    .card .product-description .original-price {
+        margin: 0;
+    }
+
+    .card .product-description .sale-price {
+        margin: 0;
+    }
+}
