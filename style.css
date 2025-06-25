@@ -111,6 +111,10 @@ body {
     background: var(--green-700);
 }
 
+.card .product-description button:active {
+    background: hsl(158, 36%, 43%);
+}
+
 
 .product-photo-mobile {
     display: none;
