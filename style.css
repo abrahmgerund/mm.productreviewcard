@@ -59,6 +59,7 @@ body {
     color: var(--black);
     margin: 1.25rem 0;
     line-height: 2rem;
+    font-size: 2rem;
 }
 
 .card .product-description p {
@@ -107,13 +108,14 @@ body {
     font-size: 0.8rem;
 }
 
-.card .product-description button:hover {
+.product-description button:hover {
     background: var(--green-700);
 }
 
-.card .product-description button:active {
+.product-description button:active {
     background: hsl(158, 36%, 43%);
 }
+
 
 
 .product-photo-mobile {
